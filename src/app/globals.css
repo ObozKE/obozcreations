@@ -1,62 +1,45 @@
 @import "tailwindcss";
 
-@layer utilities {
-  @keyframes blob {
-    0% {
-      transform: translate(0px, 0px) scale(1);
-    }
-    33% {
-      transform: translate(30px, -50px) scale(1.1);
-    }
-    66% {
-      transform: translate(-20px, 20px) scale(0.9);
-    }
-    100% {
-      transform: translate(0px, 0px) scale(1);
-    }
-  }
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-10px);
-    }
-  }
-  @keyframes pulseGlow {
-    0%, 100% {
-      opacity: 0.4;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.8;
-      transform: scale(1.05);
-    }
-  }
-  .animate-blob {
-    animation: blob 10s infinite ease-in-out;
-  }
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-  .animation-delay-4000 {
-    animation-delay: 4s;
-  }
-  .animate-float {
-    animation: float 5s infinite ease-in-out;
-  }
-  .animate-pulse-glow {
-    animation: pulseGlow 4s infinite ease-in-out;
-  }
+@theme {
+  --color-bg-dark: #100F0E;
+  --color-bg-cream: #FEFFE4;
+  --color-accent: #E7F637;
+  --color-text-cream: #FDFFE5;
+  --color-text-dark: #141310;
+  --color-muted-dark: #55564A;
+  --color-muted-cream: #B8BBA0;
+
+  --font-display: var(--font-display), sans-serif;
+  --font-body: var(--font-body), sans-serif;
 }
 
-:root {
-  --background: #020617;
-  --foreground: #f8fafc;
-}
+@layer base {
+  :root {
+    --bg-dark: #100F0E;
+    --bg-cream: #FEFFE4;
+    --accent: #E7F637;
+    --text-cream: #FDFFE5;
+    --text-dark: #141310;
+    --muted-dark: #55564A;
+    --muted-cream: #B8BBA0;
+  }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  overflow-x: hidden;
+  html {
+    scroll-behavior: smooth;
+    background-color: #100F0E;
+  }
+
+  body {
+    background-color: #100F0E;
+    color: #FDFFE5;
+    font-family: var(--font-body), sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  ::selection {
+    background-color: #E7F637;
+    color: #141310;
+  }
 }
