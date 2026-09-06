@@ -6,9 +6,9 @@ import { ContactCTABanner } from "@/components/shared/ContactCTABanner";
 
 export const metadata: Metadata = {
   title: "Services & Capabilities",
-  description: "Explore videography, photography, cinematography, drone aerial coverage, event filming, and post-production services offered by ObozCreations in Nairobi, Kenya.",
+  description: "Explore videography, photography, cinematography, drone aerial coverage, event filming, and post-production services offered by BoldCreations in Nairobi, Kenya.",
   openGraph: {
-    title: "Services & Capabilities | ObozCreations",
+    title: "Services & Capabilities | BoldCreations",
     description: "Professional film production, photography, and post-production services in Nairobi, Kenya.",
   },
 };
@@ -55,11 +55,11 @@ export default function ServicesPage() {
 
   return (
     <div className="w-full bg-bg-cream text-text-dark min-h-screen">
-      {/* Top CTA Banner per §7.1 */}
+      {/* Top CTA Banner */}
       <ContactCTABanner
         eyebrow="TAILORED PRODUCTIONS"
         headline="CREATIVE CAPABILITIES FOR EVERY FRAME."
-        href="/contact"
+        href="/#contact"
         buttonLabel="BOOK A CONSULTATION"
         variant="dark"
       />
@@ -77,7 +77,7 @@ export default function ServicesPage() {
             ghostClassName="text-muted-dark opacity-10"
           />
           <p className="font-body text-base text-muted-dark max-w-2xl pt-2">
-            From concept development and principal photography to final post-production, ObozCreations delivers full-service visual storytelling tailored for brands, agencies, and private clients.
+            From concept development and principal photography to final post-production, BoldCreations delivers full-service visual storytelling tailored for brands, agencies, and private clients.
           </p>
         </div>
 
@@ -100,7 +100,7 @@ export default function ServicesPage() {
       <ContactCTABanner
         eyebrow="READY TO PRODUCE YOUR VISION?"
         headline="LET'S DISCUSS YOUR SCOPE AND TIMELINE."
-        href="/contact"
+        href="/#contact"
         buttonLabel="GET IN TOUCH"
         variant="cream"
       />

@@ -1,5 +1,4 @@
 import React from "react";
-import Metadata from "next";
 import { EchoHeadline } from "@/components/shared/EchoHeadline";
 import { PillBracketLink } from "@/components/shared/PillBracketLink";
 import { SkewedImageStack } from "@/components/shared/SkewedImageStack";
@@ -53,10 +52,10 @@ export default function HomePage() {
   return (
     <div className="w-full">
       {/* 1. HERO SECTION (Dark Background) */}
-      <section className="w-full bg-bg-dark text-text-cream pt-8 pb-16 px-5 md:px-10 max-w-[1440px] mx-auto">
+      <section className="w-full bg-bg-dark text-text-cream pt-8 pb-16 px-5 md:px-10 max-w-[1440px] mx-auto" id="hero">
         <div className="text-center max-w-4xl mx-auto space-y-4">
           <EchoHeadline
-            text="OBOZCREATIONS"
+            text="BOLDCREATIONS"
             as="h1"
             className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl tracking-tighter"
           />
@@ -64,18 +63,20 @@ export default function HomePage() {
           <div className="flex items-center justify-center gap-3 pt-2">
             <span className="w-1 h-5 rounded-full bg-accent" aria-hidden="true" />
             <p className="font-body text-xs md:text-sm lg:text-base font-medium tracking-[0.15em] uppercase text-muted-cream max-w-xl">
-              A Nairobi-based studio crafting film, photography, and visual stories. {"{{TODO: confirm hero positioning statement}}"}
+              A Nairobi-based studio crafting film, photography, and visual stories.
             </p>
             <span className="w-1 h-5 rounded-full bg-accent" aria-hidden="true" />
           </div>
         </div>
 
         {/* Hero Showcase Carousel */}
-        <HeroCarousel slides={featuredWorks} />
+        <div id="work" className="scroll-mt-24">
+          <HeroCarousel slides={featuredWorks} />
+        </div>
       </section>
 
       {/* 2. CREAM STATEMENT & SERVICES SECTION */}
-      <section className="w-full bg-bg-cream text-text-dark py-20 md:py-32 px-5 md:px-10">
+      <section className="w-full bg-bg-cream text-text-dark py-20 md:py-32 px-5 md:px-10" id="services">
         <div className="max-w-[1440px] mx-auto space-y-16">
           {/* Big Statement */}
           <div className="max-w-4xl border-l-4 border-text-dark pl-6 md:pl-10 py-2">
@@ -83,7 +84,7 @@ export default function HomePage() {
               Our Studio Philosophy
             </span>
             <h2 className="font-display text-3xl md:text-5xl lg:text-6xl uppercase tracking-tight leading-[1.05]">
-              BUILT FOR THE FRAME. CRAFTED FOR THE EMOTION. {"{{TODO: confirm statement copy}}"}
+              BUILT FOR THE FRAME. CRAFTED FOR THE EMOTION.
             </h2>
           </div>
 
@@ -110,7 +111,7 @@ export default function HomePage() {
             </div>
 
             <div className="flex justify-end pt-4">
-              <PillBracketLink label="VIEW DETAILED SERVICES" href="/services" variant="dark" />
+              <PillBracketLink label="BOOK A CONSULTATION" href="/#contact" variant="dark" />
             </div>
           </div>
         </div>
@@ -162,20 +163,20 @@ export default function HomePage() {
       </section>
 
       {/* 4. ABOUT TEASER SECTION (Cream Background) */}
-      <section className="w-full bg-bg-cream text-text-dark py-20 md:py-28 px-5 md:px-10 border-t border-muted-dark/20">
+      <section className="w-full bg-bg-cream text-text-dark py-20 md:py-28 px-5 md:px-10 border-t border-muted-dark/20" id="about">
         <div className="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <span className="font-body text-xs uppercase tracking-[0.2em] text-muted-dark font-semibold block">
-              About ObozCreations
+              About BoldCreations
             </span>
             <h2 className="font-display text-3xl md:text-5xl uppercase tracking-tight leading-[1.05]">
               PASSION FOR LIGHT. DEDICATION TO CINEMA.
             </h2>
             <p className="font-body text-base text-muted-dark leading-relaxed">
-              Based in Nairobi, Kenya, ObozCreations is an independent creative studio founded by cinematographer Martin Oboz. We craft films, commercials, and photographic stories across East Africa and beyond.
+              Based in Nairobi, Kenya, BoldCreations is an independent creative studio founded by cinematographer Martin Oduor. We craft films, commercials, and photographic stories across East Africa and beyond.
             </p>
             <div className="pt-2">
-              <PillBracketLink label="ABOUT THE STUDIO" href="/about" variant="dark" />
+              <PillBracketLink label="GET IN TOUCH" href="/#contact" variant="dark" />
             </div>
           </div>
 
@@ -214,7 +215,7 @@ export default function HomePage() {
                   rel="noopener noreferrer"
                   className="underline hover:opacity-80"
                 >
-                  +254 700 000 000 {"{{TODO: confirm WhatsApp number}}"}
+                  +254 700 000 000
                 </a>
               </p>
             </div>

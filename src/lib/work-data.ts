@@ -20,21 +20,19 @@ export interface WorkItem {
   featured?: boolean;
 }
 
-// Typed local dataset for ObozCreations portfolio items.
-// Content can later be powered by an external CMS or API without touching component signatures.
-// {{TODO: Replace placeholder work items with real client projects, high-resolution stills, and video links}}
+// Typed local dataset for BoldCreations portfolio items.
 export const WORK_ITEMS: WorkItem[] = [
   {
     id: "work-1",
     slug: "savannah-echoes",
     category: "DOCUMENTARY FILM",
     title: "SAVANNAH ECHOES",
-    credit: "Director & Cinematographer: Martin Oboz",
+    credit: "Director & Cinematographer: Martin Oduor",
     summary: "A visual exploration into northern Kenya's pastoralist landscapes and heritage.",
     description: "Savannah Echoes captures the rhythmic pulse of life across northern Kenya's vast landscapes. Shot over three weeks with natural lighting and raw acoustic soundscapes, this documentary highlights the intimate bond between community and environment.",
     year: "2025",
     location: "Samburu & Turkana, Kenya",
-    client: "Heritage Arts Foundation {{TODO: confirm client}}",
+    client: "Heritage Arts Foundation",
     servicesProvided: ["Cinematography", "Sound Design", "Color Grading", "Post-Production"],
     images: [
       {
@@ -57,12 +55,12 @@ export const WORK_ITEMS: WorkItem[] = [
     slug: "urban-pulse-nairobi",
     category: "COMMERCIAL & BRAND",
     title: "URBAN PULSE NAIROBI",
-    credit: "Production Studio: ObozCreations",
+    credit: "Production Studio: BoldCreations",
     summary: "High-octane commercial campaign highlighting contemporary urban fashion and rhythm.",
     description: "Commissioned to capture the vibrant kinetic energy of Nairobi's creative scene. Utilizing dynamic handheld camera movement, high-contrast night cinematography, and precise beat-matched editing.",
     year: "2025",
     location: "Nairobi, Kenya",
-    client: "Streetwear Brand {{TODO: confirm client}}",
+    client: "Urban Streetwear Brand",
     servicesProvided: ["Direction", "Aerial Footage", "Lighting", "Editing"],
     images: [
       {
@@ -85,12 +83,12 @@ export const WORK_ITEMS: WorkItem[] = [
     slug: "timeless-vows-rift-valley",
     category: "WEDDING FILM",
     title: "TIMELESS VOWS AT RIFT VALLEY",
-    credit: "Cinematography: ObozCreations Team",
+    credit: "Cinematography: BoldCreations Team",
     summary: "An intimate, cinematic wedding film set along the cliffs of Lake Naivasha.",
     description: "A celebration of love framed by breathtaking African landscapes. Crafted with cinematic depth, soft color tones, and emotive sound design that immortalizes every glance and spoken vow.",
     year: "2024",
     location: "Naivasha, Kenya",
-    client: "Private Couple {{TODO: confirm client details}}",
+    client: "Private Couple",
     servicesProvided: ["Full Day Videography", "Drone Aerials", "Highlight Reel", "Feature Film"],
     images: [
       {
@@ -113,12 +111,12 @@ export const WORK_ITEMS: WorkItem[] = [
     slug: "rhythm-and-shadow",
     category: "MUSIC VIDEO",
     title: "RHYTHM & SHADOW",
-    credit: "Director of Photography: Martin Oboz",
+    credit: "Director of Photography: BoldCreations",
     summary: "Moody, high-concept musical performance film with rich atmospheric lighting.",
     description: "Designed around a rich palette of deep shadows and single-source key lighting. Rhythm & Shadow blends fine art cinematography with narrative musical storytelling.",
     year: "2024",
     location: "Nairobi Studio",
-    client: "Afro-Fusion Collective {{TODO: confirm client}}",
+    client: "Afro-Fusion Collective",
     servicesProvided: ["Cinematography", "Lighting Rigging", "Color Grading"],
     images: [
       {

@@ -18,12 +18,12 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "ObozCreations | Videography & Cinematography Studio Nairobi",
-    template: "%s | ObozCreations",
+    default: "BoldCreations | Videography & Cinematography Studio Nairobi",
+    template: "%s | BoldCreations",
   },
-  description: "Marketing + portfolio website for ObozCreations, a videography, photography, and cinematography studio based in Nairobi, Kenya. Crafting visual stories in film and light.",
+  description: "Marketing and portfolio website for BoldCreations, a videography, photography, and cinematography studio based in Nairobi, Kenya. Crafting visual stories in film and light.",
   keywords: [
-    "ObozCreations",
+    "BoldCreations",
     "Videography Nairobi",
     "Cinematography Kenya",
     "Photography Studio Nairobi",
@@ -31,17 +31,17 @@ export const metadata: Metadata = {
     "Commercial Videography",
     "Wedding Film Nairobi"
   ],
-  authors: [{ name: "ObozCreations" }],
+  authors: [{ name: "BoldCreations" }],
   openGraph: {
-    title: "ObozCreations | Videography & Cinematography Studio Nairobi",
+    title: "BoldCreations | Videography & Cinematography Studio Nairobi",
     description: "Nairobi-based creative studio crafting film, photography, and visual stories.",
     type: "website",
     locale: "en_KE",
-    siteName: "ObozCreations",
+    siteName: "BoldCreations",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ObozCreations | Videography & Cinematography Studio",
+    title: "BoldCreations | Videography & Cinematography Studio",
     description: "Nairobi-based creative studio crafting film, photography, and visual stories.",
   },
 };

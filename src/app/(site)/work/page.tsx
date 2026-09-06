@@ -8,10 +8,10 @@ import { getAllWork } from "@/lib/work-data";
 
 export const metadata: Metadata = {
   title: "Selected Work | Portfolio",
-  description: "Explore selected videography, photography, and cinematography projects by ObozCreations studio in Nairobi, Kenya.",
+  description: "Explore selected videography, photography, and cinematography projects by BoldCreations studio in Nairobi, Kenya.",
   openGraph: {
-    title: "Selected Work | ObozCreations Portfolio",
-    description: "Cinematic films, commercial campaigns, wedding stories, and music videos by ObozCreations.",
+    title: "Selected Work | BoldCreations Portfolio",
+    description: "Cinematic films, commercial campaigns, wedding stories, and music videos by BoldCreations.",
   },
 };
 
@@ -93,7 +93,7 @@ export default function WorkPage() {
                   <div className="pt-4">
                     <PillBracketLink
                       label="CONTACT ABOUT THIS WORK"
-                      href={`/contact?inquiry=${encodeURIComponent(item.category)}`}
+                      href="/#contact"
                       variant="chartreuse"
                     />
                   </div>
@@ -117,7 +117,7 @@ export default function WorkPage() {
       <ContactCTABanner
         eyebrow="HAVE A PROJECT IN MIND?"
         headline="LET'S CRAFT YOUR NEXT VISUAL STORY."
-        href="/contact"
+        href="/#contact"
         buttonLabel="START A CONVERSATION"
         variant="cream"
       />

@@ -29,7 +29,7 @@ export function SkewedImageStack({
   const displayImages = images.slice(0, 3);
   const topImage = displayImages[0] || {
     src: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80",
-    alt: "ObozCreations photography frame placeholder",
+    alt: "BoldCreations photography frame placeholder",
   };
   const middleImage = displayImages[1] || topImage;
   const backImage = displayImages[2] || middleImage;

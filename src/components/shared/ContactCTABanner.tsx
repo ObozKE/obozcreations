@@ -14,7 +14,7 @@ interface ContactCTABannerProps {
 export function ContactCTABanner({
   eyebrow = "READY TO CREATE?",
   headline = "LET'S SHAPE YOUR NEXT VISUAL STORY TOGETHER.",
-  href = "/contact",
+  href = "/#contact",
   buttonLabel = "CONTACT US",
   variant = "dark",
   className,

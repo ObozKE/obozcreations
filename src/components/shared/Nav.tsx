@@ -8,10 +8,10 @@ import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { label: "WORK", href: "/work" },
-  { label: "SERVICES", href: "/services" },
-  { label: "ABOUT", href: "/about" },
-  { label: "CONTACT", href: "/contact" },
+  { label: "WORK", href: "/#work" },
+  { label: "SERVICES", href: "/#services" },
+  { label: "ABOUT", href: "/#about" },
+  { label: "CONTACT", href: "/#contact" },
 ];
 
 export function Nav() {
@@ -25,34 +25,30 @@ export function Nav() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-bg-dark/95 backdrop-blur-md border-b border-muted-dark/30 h-18 md:h-20 transition-colors">
         <div className="max-w-[1440px] mx-auto h-full px-5 md:px-10 flex items-center justify-between">
-          {/* Logo Monogram */}
+          {/* Monogram Logo - Redirects to Homepage */}
           <Link
             href="/"
             onClick={closeMenu}
             className="group flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm"
-            aria-label="ObozCreations Home"
+            aria-label="BoldCreations Home"
           >
             <span className="font-display text-2xl md:text-3xl tracking-tighter text-text-cream group-hover:text-accent transition-colors">
-              OC
+              BC
             </span>
             <span className="font-body text-[10px] uppercase tracking-[0.25em] text-muted-cream hidden sm:inline-block border-l border-muted-dark/60 pl-2">
               Studio
             </span>
           </Link>
 
-          {/* Desktop Nav Items */}
+          {/* Desktop Nav Items - Redirect to Homepage Sections */}
           <nav className="hidden md:flex items-center gap-8 lg:gap-10" aria-label="Main Navigation">
             {NAV_LINKS.map((link) => {
-              const isActive = pathname === link.href || (link.href !== "/" && pathname?.startsWith(link.href));
               return (
                 <Link
-                  key={link.href}
+                  key={link.label}
                   href={link.href}
                   className={cn(
-                    "font-body text-xs lg:text-sm font-semibold tracking-[0.18em] uppercase transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm py-1",
-                    isActive
-                      ? "text-accent border-b-2 border-accent"
-                      : "text-text-cream hover:text-accent"
+                    "font-body text-xs lg:text-sm font-semibold tracking-[0.18em] uppercase transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded-sm py-1 text-text-cream hover:text-accent"
                   )}
                 >
                   {link.label}
@@ -86,10 +82,9 @@ export function Nav() {
           >
             <nav className="flex flex-col gap-6" aria-label="Mobile Navigation">
               {NAV_LINKS.map((link, idx) => {
-                const isActive = pathname === link.href || (link.href !== "/" && pathname?.startsWith(link.href));
                 return (
                   <motion.div
-                    key={link.href}
+                    key={link.label}
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1 + idx * 0.08 }}
@@ -97,10 +92,7 @@ export function Nav() {
                     <Link
                       href={link.href}
                       onClick={closeMenu}
-                      className={cn(
-                        "font-display text-4xl uppercase tracking-tight block py-2 transition-colors",
-                        isActive ? "text-accent" : "text-text-cream hover:text-accent"
-                      )}
+                      className="font-display text-4xl uppercase tracking-tight block py-2 text-text-cream hover:text-accent transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -121,7 +113,7 @@ export function Nav() {
                   rel="noopener noreferrer"
                   className="hover:text-accent transition-colors"
                 >
-                  WhatsApp: +254 700 000 000 {"{{TODO: confirm WhatsApp number}}"}
+                  WhatsApp: +254 700 000 000
                 </a>
               </p>
             </div>

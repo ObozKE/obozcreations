@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ message: "Inquiry received." }, { status: 200 });
     }
 
-    // 5. Submission speed timing check (bots submit in < 3000ms)
+    // 5. Submission speed timing check (bots submit in < 2500ms)
     if (renderedAt && Date.now() - renderedAt < 2500) {
       console.warn("[Contact API] Bot submission detected via fast timing check.", {
         elapsedMs: Date.now() - renderedAt,
@@ -51,20 +51,20 @@ export async function POST(req: NextRequest) {
 
     // 6. Resend Email Dispatch
     const apiKey = process.env.RESEND_API_KEY;
-    const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL || "info@obozcreations.com";
+    const recipientEmail = process.env.CONTACT_RECIPIENT_EMAIL || "info@boldcreations.com";
 
     if (apiKey && apiKey !== "re_123456789") {
       const resend = new Resend(apiKey);
 
       const emailResponse = await resend.emails.send({
-        from: "ObozCreations Website <onboarding@resend.dev>",
+        from: "BoldCreations Website <onboarding@resend.dev>",
         to: [recipientEmail],
         replyTo: email,
         subject: `New Inquiry [${inquiryType}] from ${name}`,
         html: `
           <div style="font-family: Arial, sans-serif; padding: 20px; color: #141310; background-color: #FEFFE4;">
             <h2 style="color: #100F0E; border-bottom: 2px solid #100F0E; padding-bottom: 10px;">
-              New Website Inquiry — ObozCreations
+              New Website Inquiry — BoldCreations
             </h2>
             <p><strong>Name:</strong> ${name}</p>
             <p><strong>Email:</strong> ${email}</p>

@@ -5,10 +5,10 @@ import { ContactForm } from "@/components/shared/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact Us | Inquiry",
-  description: "Get in touch with ObozCreations videography & photography studio in Nairobi, Kenya. Book a call or submit a project inquiry.",
+  description: "Get in touch with BoldCreations videography & photography studio in Nairobi, Kenya. Book a call or submit a project inquiry.",
   openGraph: {
-    title: "Contact ObozCreations Studio",
-    description: "Book videography, photography, or film services with ObozCreations in Nairobi, Kenya.",
+    title: "Contact BoldCreations Studio",
+    description: "Book videography, photography, or film services with BoldCreations in Nairobi, Kenya.",
   },
 };
 
@@ -45,7 +45,7 @@ export default function ContactPage() {
                 <span className="text-xs uppercase tracking-widest font-semibold text-text-dark/60 block">
                   LOCATION & TIMEZONE
                 </span>
-                <p className="font-semibold text-text-dark">Nairobi, Kenya {"{{TODO: confirm public address, if any}}"}</p>
+                <p className="font-semibold text-text-dark">Nairobi, Kenya</p>
                 <p className="text-xs text-text-dark/70">Timezone: Africa/Nairobi (EAT)</p>
               </div>
 
@@ -59,7 +59,7 @@ export default function ContactPage() {
                   rel="noopener noreferrer"
                   className="font-semibold text-text-dark underline hover:opacity-80 transition-opacity"
                 >
-                  +254 700 000 000 {"{{TODO: confirm WhatsApp number}}"}
+                  +254 700 000 000
                 </a>
               </div>
 
@@ -68,7 +68,7 @@ export default function ContactPage() {
                   EMAIL INQUIRIES
                 </span>
                 <p className="font-semibold text-text-dark">
-                  info@obozcreations.com {"{{TODO: confirm destination email}}"}
+                  info@boldcreations.com
                 </p>
               </div>
             </div>

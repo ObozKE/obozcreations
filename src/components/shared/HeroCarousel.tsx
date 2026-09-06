@@ -6,7 +6,6 @@ import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { PillBracketLink } from "./PillBracketLink";
 import type { WorkItem } from "@/lib/work-data";
-import { cn } from "@/lib/utils";
 
 interface HeroCarouselProps {
   slides: WorkItem[];
@@ -95,7 +94,7 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
 
       {/* Slide Overlay Content */}
       <div className="relative z-20 h-full max-w-[1440px] mx-auto p-6 md:p-12 flex flex-col justify-between">
-        {/* Top Eyebrow & Optional Testimonial Chip */}
+        {/* Top Eyebrow & Rating Chip */}
         <div className="flex items-start justify-between gap-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full border border-white/10">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
@@ -104,16 +103,15 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
             </span>
           </div>
 
-          {/* Testimonial Chip Placeholder per §0.6 */}
           <div className="hidden sm:flex items-center gap-2 bg-black/70 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10 max-w-xs text-xs text-text-cream/90">
             <span className="text-accent text-sm">★ 5.0</span>
             <span className="truncate italic">
-              "Masterful vision & execution." {"{{TODO: real client quote}}"}
+              "Masterful vision & execution."
             </span>
           </div>
         </div>
 
-        {/* Bottom Slide Info: Title, Credit & Link */}
+        {/* Bottom Slide Info: Title, Credit & Link to Homepage */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pt-12">
           <div className="space-y-2 max-w-2xl">
             <h3 className="font-display text-3xl md:text-5xl lg:text-6xl uppercase tracking-tight text-text-cream leading-tight drop-shadow-md">
@@ -129,7 +127,7 @@ export function HeroCarousel({ slides }: HeroCarouselProps) {
           <div className="flex items-center gap-4">
             <PillBracketLink
               label="EXPLORE PROJECT"
-              href={`/work#${activeSlide.slug}`}
+              href="/#work"
               variant="chartreuse"
             />
           </div>
